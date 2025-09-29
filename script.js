@@ -14,9 +14,8 @@ searchBtn.addEventListener("click", async () => {
 
     if(!response.ok){throw new Error("Input value not found!")}
 
-    const responseJSON = await response.json()
 
-    const responseData = responseJSON.data[0];
+    const responseData = response.data[0];
 
     const name = responseData.name.common;
 
